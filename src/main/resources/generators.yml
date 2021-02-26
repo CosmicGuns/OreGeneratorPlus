@@ -1,0 +1,20 @@
+# Enabling advanced items makes ores 100% customizable, but changes format in item config into an uglier one.
+# This also unlocks the ability to copy ALL attributes of the item in hand upon "/gen setore <generator id>"
+# When true, each item config must be a valid MetaData, or it will result in error.
+advanced-items: false
+
+Generators:
+    coal-generator:
+        required-player-distance: -1
+        interval: 80
+        drops:
+            coal:
+                item:
+                    name: '&8&lCoal'
+                    lore:
+                        - '&7&oMysterious black'
+                        - '&7&orock'
+                    material: COAL
+                    quantity: 6
+                probability:
+                    enabled: false

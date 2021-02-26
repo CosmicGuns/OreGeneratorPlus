@@ -1,0 +1,25 @@
+# All the types of guards that can be spawned - "bodyguard" and "cop" are two default types. You can edit or add your own.
+
+bodyguard:
+    permission: 'guardnpc.bodyguard.%action%'
+    # To acquire the Bodyguard spawn egg, use the command "/guard get bodyguard" (requires permission "guardnpc.bodyguard.get")
+    item:
+        name: '&c&lBodyguard &dEgg'
+        lore:
+          - '&7&oThe bodyguard will protect'
+          - '&7&oyou with his life!'
+        material: EGG
+    npc:
+        entity: player
+        name: "&b%player%'s &7Bodyguard"
+    
+cop:
+    permission: 'guardnpc.cop.%action%'
+    item:
+        name: '&c&lCop &dEgg'
+        lore:
+          - '&7&oA cop! Better run!'
+        material: BARRIER
+    npc:
+        entity: skeleton
+        name: '&c&lPoliceman'

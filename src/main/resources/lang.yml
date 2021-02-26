@@ -1,0 +1,57 @@
+# You may turn any message here into something like this with hover/run/suggest effects on the text.
+# Each element of the list is another segment of the message with different effects.
+command-message:
+  - message: '&8&m======&3&l Ore&b&lGenerator&f&lPlus &3Commands &8&m======'
+  # If new-line is true, the next segment will appear on a new line. Otherwise, it'll be attached to the end of the last segment.
+  - new-line: true
+    message: '&3/gen help&8: &7Displays this message'
+    hover: '&eClick to run'
+    run: '/gen help'
+  - new-line: true
+    message: '&3/gen set&8: &7Sets the generator to a specified location'
+    hover: '&eClick to run'
+    suggest: '/gen set '
+  - new-line: true
+    message: '&3/gen enable&8: &7Enables a previously disabled generator'
+    hover: '&eClick to run'
+    suggest: '&e/gen enable '
+  - new-line: true
+    message: '&3/gen disable&8: &7Disables a previously enabled generator'
+    hover: '&eClick to run'
+    suggest: '&e/gen disable '
+  - new-line: true
+    message: '&3/gen list&8: &7Lists the generators loaded in'
+    hover: '&eClick to run'
+    run: '&e/gen list'
+  - new-line: true
+    message: '&3/gen about&8: &7Gives you plugin information'
+    hover: '&eClick to run'
+    run: '&e/gen version'
+  - new-line: true
+    message: '&3/gen reload&8: &7Reloads the configuration files'
+    hover: '&eClick to run'
+    run: '&e/gen reload'
+command-set-usage: '%prefix%&3Usage: &b/gen set &f<generator> [<x> <y> <z> [<world>]]'
+command-set-console-usage: '%prefix%&3Usage: &b/gen set &f<generator> <x> <y> <z> <world>'
+command-enable-usage: '%prefix%&3Usage: &b/gen enable &f<generator>'
+command-disable-usage: '%prefix%&3Usage: &b/gen disable &f<generator>'
+plugin-reloaded: '%prefix%OreGeneratorPlus has been successfully &3&nreloaded!'
+
+location-set: '%prefix%Location set! Enable the generator with &3/gen enable %generator%&7!'
+generator-enabled: '%prefix%Generator &3%generator% &7successfully enabled!'
+generator-already-enabled: '%prefix%Generator &3%generator% &7is already enabled!'
+generator-not-set: '%prefix%Generator &3%generator% &7is not set! Use &3/gen set %generator% &7to set a location!'
+generator-disabled: '%prefix%Generator &3%generator% &7successfully disabled!'
+generator-already-disabled: '%prefix%Generator &3%generator% &7is already disabled!'
+
+generator-list-heading: '&8&m=====&3&l Ore&b&lGenerator&f&lPlus &3Generators &8&m====='
+generator-list-item: '&7- &3%generator%'
+
+no-permission: '%prefix%You must have the permission &3&n%permission%&7 to execute this command.'
+invalid-world: '%prefix%&c%world%&7 is not a valid world! Please enter a valid world name.'
+not-a-player: '%prefix%You must be a player to run this command.'
+invalid-generator: '%prefix%%generator% does not exist!'
+material-error: '%prefix%Are you sure that is a valid material? There are errors in &3&nconfig.yml&7.'
+
+#Do not change manually this unless you know what you are doing!
+lang-file-version: 1

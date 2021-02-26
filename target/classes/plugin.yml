@@ -1,0 +1,5 @@
+name: OreGeneratorPlus
+main: net.velinquish.oregeneratorplus.OreGeneratorPlus
+version: 1.0.0-BETA
+author: Velinquish
+softdepend: [Citizens, Vault]

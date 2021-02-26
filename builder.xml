@@ -1,0 +1,12 @@
+<project name="OreGeneratorPlus" default="Build">
+	<property name="library" value="VelinquishUtils" />
+	<!-- Get all classes from target/classes in your plugin code folder, compile 
+		them and place in your test server folder automatically. -->
+	<target name="Build">
+		<jar
+			jarfile="C:\Users\88jli\Downloads\Local server\plugins\${ant.project.name}.jar"
+			basedir="./target/classes/" includes="**/*">
+			<fileset dir="../${library}/target/classes" />
+		</jar>
+	</target>
+</project>

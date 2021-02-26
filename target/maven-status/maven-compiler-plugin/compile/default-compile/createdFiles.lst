@@ -1,0 +1,10 @@
+net\velinquish\oregeneratorplus\commands\anycommands\ListCommand.class
+net\velinquish\oregeneratorplus\managers\EnableCommand.class
+net\velinquish\oregeneratorplus\Generator.class
+net\velinquish\oregeneratorplus\managers\CommandManager.class
+net\velinquish\oregeneratorplus\managers\DisableCommand.class
+net\velinquish\oregeneratorplus\commands\anycommands\SetCommand.class
+net\velinquish\oregeneratorplus\commands\anycommands\VersionCommand.class
+net\velinquish\oregeneratorplus\commands\anycommands\ReloadCommand.class
+net\velinquish\oregeneratorplus\managers\GeneratorManager.class
+net\velinquish\oregeneratorplus\OreGeneratorPlus.class

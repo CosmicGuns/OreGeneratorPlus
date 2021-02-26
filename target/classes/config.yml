@@ -1,0 +1,65 @@
+# OreGeneratorPlus v.1.0.0-BETA
+# Created by Velinquish <3
+
+# What will appear in front of every message sent by the plugin
+plugin-prefix: '&b&lGenerator &8» &7'
+
+# Main command for OreGeneratorPlus
+main-command: 'oregeneratorplus'
+# Plugin aliases - alternatives to /oregeneratorplus
+plugin-aliases:
+    - 'oregenerator'
+    - 'generator'
+    - 'gen'
+    - 'ogp'
+    - 'og'
+    - 'oregen'
+    
+# Permission for creating, editing, and setting generators. The %action% placeholder will be replaced with the following valid actions:
+# - set (sets the generator to spawn at the specified location)
+# - enable
+# - disable
+# - list (cannot be used with generator-specific permissions)
+# - reload (cannot be used with generator-specific permissions)
+permission: 'oregeneratorplus.admin.%action%'
+  
+# Only change this if you are experiencing errors, such as the ores aren't spawning in
+# or if it's interfering with another plugin. Priorities are 'lowest', 'low', 'normal', 'high', 'highest', and 'monitor'.
+listener:
+    priority: 'high'
+  # Whether to prevent other plugins from canceling the spawning of a guard when an egg is placed
+    ignore-cancelled: false
+
+# These are the default settings for all generators - if any of these settings aren't specified in the "generators.yml" config, it will use these.
+# Any and all of these settings can be used on any generator in "generators.yml". You may add these to specific generators in "generators.yml".
+Default:
+    # Permission required to use this generator in commands - default "oregeneratorplus.<type>.<action>"
+    permission: 'oregeneratorplus.%type%.%action%'
+    # The minimum distance in blocks a player must be before ores spawn. Set to -1 to disable.
+    required-player-distance: -1
+    # In ticks; 20 ticks are 1 second.
+    interval: 40
+    # Ores spawned by the generator
+    drops:
+        # List of items. If there are more than one, the generator randomly picks from one.
+        1:
+            item:
+                name: '&8&lCoal'
+                lore:
+                    - '&7&oMysterious black'
+                    - '&7&orock'
+                # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html for a list of materials - valid ones only, please
+                material: COAL
+                # Quantity of this item that is spawned every time
+                quantity: 1
+            # If the probabilities add up to less than 100, there's a chance the generator will drop nothing.
+            probability:
+                # If disabled, all drops will have an equal chance of dropping.
+                enabled: false
+    
+#The sample guards are in the "guards.yml" file. You can edit them or add your own.
+    
+# For developer debugging purposes
+debug: true
+# Do not change manually this unless you know what you are doing!
+config-version: 1
